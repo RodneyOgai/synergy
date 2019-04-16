@@ -1,0 +1,312 @@
+body 
+	margin: 0 auto
+	padding: 0
+
+@font-face
+	font-family: "Proxima Nova - Semibold"
+	src: url('../fonts/ProximaNova-Semibold.eot')
+	src: url('../fonts/ProximaNova-Semibold.ttf')
+	src: url('../fonts/ProximaNova-Semibold.woff')
+
+@font-face
+	font-family: "Proxima Nova"
+	src: url('../fonts/ProximaNova-Regular.eot')
+	src: url('../fonts/ProximaNova-Regular.ttf')
+
+@font-face
+	font-family: "Proxima Nova - Extrabld"
+	src: url('../fonts/ProximaNovaCond-Extrabld.eot')
+	src: url('../fonts/ProximaNovaCond-Extrabld.ttf')	
+	src: url('../fonts/ProximaNovaCond-Extrabld.woff')
+	
+$text-green: #66b045
+$text-violet: #542749
+
+#header 
+	width: 100%
+	margin: 0 auto
+
+.wrapper 
+	margin: 0 auto
+
+.wrapper-block
+	width: 90%
+	margin: 0 auto
+	display: flex
+
+.header-wrapper 
+	width: 100%
+	max-width: 1920px
+	overflow: hidden
+	min-width: 300px
+	min-height: 890px
+	height: 100%
+	// padding: 50px 0
+	.logo-wrapper
+		width: 50%
+		margin-top: 5%
+		margin-left: 10%
+		position: relative
+		img
+			max-width: 259px
+			margin-left: 50px
+		.logo-text
+			color: $text-green
+			width: 133px
+			position: absolute
+			line-height: 13.3px
+			margin-left: -5%
+			text-transform: uppercase
+			font-size: 12px
+			font-family: "Proxima Nova - Semibold", sans-serif
+		.logo-text-date
+			display: flex
+			flex-direction: column
+			max-width: 231px
+			margin-left: 50px
+			.logo-date-wrapper
+				margin-bottom: 0
+				margin-top: 40px
+				.date-number
+					width: 78px
+					color: $text-green
+					font-family: "Proxima Nova", sans-serif
+					font-size: 83px
+					font-weight: 700
+					letter-spacing: -1.59px
+					float: left
+					margin-top: -15px
+				.date-month
+					color: $text-green
+					font-family: "Proxima Nova - Extrabld", sans-serif
+					font-size: 30px
+					letter-spacing: 0.18px
+					line-height: 0.8
+				.date-time
+					color: $text-green
+					font-family: "Proxima Nova", sans-serif
+					font-weight: 400
+					font-size: 30px
+					letter-spacing: 0.21px
+			.logo-text-left
+					width: 231px
+					color: $text-green
+					font-family: "Proxima Nova", sans-serif
+					font-size: 18px
+					margin: -10px 0
+					font-weight: 700
+					text-transform: uppercase
+					letter-spacing: 0.4px
+		.h1
+			color: $text-violet
+			font-family: "Proxima Nova", sans-serif
+			text-transform: uppercase
+			font-size: 20px
+			line-height: 0.8
+			h1
+				margin-top: 40px
+				margin-bottom: 0
+			.bold
+				color: $text-violet
+				font-family: "Proxima Nova - Extrabld" , sans-serif
+				font-weight: 700
+				font-size: 100px
+				letter-spacing: 1.8px	
+			.play
+				.fa-play-circle
+					margin-left: 50px
+					font-size: 100px
+	.contacts
+		margin-top: 5%
+		width: 30%
+		.contact-info
+			display: flex
+			justify-content: space-between
+			margin-bottom: 5%
+			.contact-block
+				.phone , .mail
+					font-family: "Proxima Nova", sans-serif
+					font-weight: 700
+					color: $text-green
+				.phone
+					text-decoration: none
+				.metro , .adress
+					text-decoration: none
+				.metro
+					color: $text-violet
+					font-family: "Proxima Nova" , sans-serif
+					font-size: 18px
+					font-weight: 700
+				.adress
+					color: $text-green
+					margin-left: 20px
+					font-size: 16px
+					font-weight: 400
+.form-wrapper
+	min-width: 434px
+	padding: 20px 0
+	background-color: rgba(#2c4c65 , .4)
+	h2
+		color: #fff
+		text-align: center
+		font-size: 18px
+		font-family: "Proxima Nova - Semibold", sans-serif
+		text-transform: uppercase
+		letter-spacing: 1.02px
+		.bold-h2
+			display: block
+			font-size: 41px
+			font-family: "Proxima Nova - Semibold", sans-serif
+	.form-input
+		display: block
+		margin: 18px auto
+		min-width: 300px
+		padding: 0 18px
+		height: 60px
+		background-color: #ffffff
+		font-family: "Proxima Nova" , sans-serif
+		font-size: 18px
+		font-weight: 400
+		border: none
+	.form-input::placeholder
+		font-family: "Proxima Nova" , sans-serif
+		color: #839fb1
+		font-weight: 400
+		opacity: 1
+	.form-input:-ms-input-placeholder
+		font-family: "Proxima Nova" , sans-serif
+	  	color: #839fb1
+	  	font-weight: 400
+	.form-input::-ms-input-placeholder 
+		font-family: "Proxima Nova" , sans-serif
+	  	color: #839fb1
+	  	font-weight: 400
+
+.choose-variant 
+	width: 300px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	text-align: center
+	margin: 20px auto 0
+	border: 2px solid #fff
+	padding: 5px
+	border-radius: 50px
+	img
+		vertical-align: middle
+
+.checkbox-wrapper
+	width: 300px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin: 20px auto
+	.checkbox-text
+		color: #ffffff
+		font-family: "Proxima Nova" , sans-serif
+		font-size: 12px
+		font-weight: 400
+		text-transform: uppercase
+		letter-spacing: 0.09px
+		max-width: 250px
+
+.btn
+    display: inline-flex
+    padding: 10px
+    width: 50%
+    position: relative
+    border-radius: 50px
+    justify-content: space-around
+    color: #fff
+.btn-text
+    text-align: center
+    font-size: 12px
+    font-weight: 400
+    font-family: "Proxima Nova - Semibold" , sans-serif
+    text-transform: uppercase
+    width: 50px
+    letter-spacing: 0.69px
+	
+input[type="radio"].toggle 
+    display: none
+    & + label
+        cursor: pointer
+        &:hover
+            background: none
+        &:after
+            background: #1a1a1a
+            content: ""
+            height: 100%
+            position: absolute
+            top: 0
+            transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1)
+            width: 100%
+            z-index: -1
+    &.toggle-left + label 
+        border-right: 0
+        &:after
+            left: 100%
+    &.toggle-right + label
+        margin-left: -5px
+        &:after
+            left: -100%
+    &:checked + label 
+        cursor: default
+        color: #839fb1
+        background-color: #fff
+        &:after
+            left: 0
+
+
+
+.checkboxcontainer input
+  display: none
+
+
+.checkboxcontainer
+  display: inline-flex
+  padding-left: 30px
+  position: relative
+  cursor: pointer
+  user-select: none
+  margin-bottom: 30px
+  margin-left: 10px
+
+
+.checkboxcontainer .checkmark-1
+  display: inline-flex
+  width: 15px
+  height: 15px
+  position: absolute
+  left: 5px
+  top: 5px
+
+.checkboxcontainer .checkmark
+  display: inline-flex
+  width: 25px
+  height: 25px
+  position: absolute
+  left: 0
+  top: 0
+  border: 2px solid #fff
+
+.checkboxcontainer input:checked + .checkmark-1
+  background-color: #fff
+  border: 2px solid #fff
+
+.checkboxcontainer input:checked + .checkmark
+  background-color: red
+  border: 2px solid #fff
+
+.checkboxcontainer input:checked + .checkmark-1:after
+  content: ""
+  position: absolute
+  height: 16px
+  width: 21px
+  border-left: 4px solid $text-green
+  border-bottom: 4px solid $text-green
+  top: -30%
+  left: 60%
+  transform: translate(-50%, -50%) rotate(-45deg)
+  z-index: 99999
+
