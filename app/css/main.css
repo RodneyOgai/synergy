@@ -468,7 +468,7 @@ input[type="radio"].toggle {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
       -ms-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
-  z-index: 99999; }
+  z-index: 2; }
 
 .lection-wrapper {
   width: 100%;
