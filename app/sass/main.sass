@@ -40,14 +40,18 @@ $text-violet: #542749
 	margin: 0 auto
 	display: flex
 
-.header-wrapper 
+#all
+	box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.75)
+	min-width: 300px
 	width: 100%
 	max-width: 1920px
+	margin: 0 auto
+
+.header-wrapper 
 	overflow: hidden
-	min-width: 300px
 	min-height: 890px
 	height: 100%
-	// padding: 50px 0
+	padding: 0 0 100px 0
 	.logo-wrapper
 		width: 50%
 		margin-top: 5%
@@ -121,9 +125,12 @@ $text-violet: #542749
 				font-size: 100px
 				letter-spacing: 1.8px	
 			.play
-				.fa-play-circle
-					margin-left: 50px
-					font-size: 100px
+				a
+					text-decoration: none
+					color: $text-violet
+					.fa-play-circle
+						margin-left: 50px
+						font-size: 100px
 	.contacts
 		margin-top: 5%
 		// width: 30%
@@ -471,3 +478,31 @@ input[type="radio"].toggle
 	background-color: #fbf9fc
 .bgv
 	background-color: #f5f0f7
+
+.text-meditation-wrap
+	margin-left: 40px
+	.m-h4
+		max-width: 380px
+		margin-bottom: 20px
+		color: #fff
+		font-family: "Proxima Nova - Semibold" , sans-serif
+		font-size: 48px
+		font-weight: 700
+		line-height: 50px
+	.meditation-items
+		display: flex
+		flex-direction: column
+		justify-content: center
+		.m-item
+			display: flex
+			align-items: center
+			margin-bottom: 20px
+			.m-img
+				margin-right: 40px
+			.m-text
+				max-width: 300px
+				color: #fff
+				font-family: "Proxima Nova" , sans-serif
+				font-size: 24px
+				font-weight: 400
+
