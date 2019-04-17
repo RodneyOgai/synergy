@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 </head>
 <body>
 	<div id="all">
@@ -40,7 +40,7 @@
 								на перемены
 							</h1>
 							<div class="play">
-								<a href="#">
+								<a data-fancybox href="https://www.youtube.com/embed/H3zNUuhYinc&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
 									<i class="fa fa-play-circle" aria-hidden="true"></i>
 								</a>
 							</div>
@@ -60,12 +60,49 @@
 						<div class="contact-info">
 							<div class="contact-block">
 								<img src="img/icons/metro.png" alt="">
-								<a href="" class="metro">Семеновская</a> <br>
-								<a href="" class="adress">Москва, Измайловский Вал, дом 2, корпус 1</a>
+								<a class="metro" data-fancybox data-type="iframe" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f37102dd9e287bf5131fb7ed1cf1a26c259c10b08225651786d6a414990883c&amp;source=constructor" href="javascript:;">Семеновская</a> <br>
+								<a class="adress" data-fancybox data-type="iframe" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f37102dd9e287bf5131fb7ed1cf1a26c259c10b08225651786d6a414990883c&amp;source=constructor" href="javascript:;">Москва, Измайловский Вал, дом 2, корпус 1</a>
+							</div>
+						</div>
+						<div class="form-modal" id="form" style="display: none">
+							<div class="form-wrapper-modal" >
+								<form action="" >
+									<h2> 
+										<span class="bold-h2">Записаться</span> на практическую лекцию
+									</h2>
+									<input type="text" class="form-input" placeholder="Введите ваше имя">
+									<input type="tel" class="form-input" placeholder="Введите ваш телефон">
+									<input type="email" class="form-input" placeholder="Введите ваш e-mail">
+									<div class="choose-variant">
+										<input id="toggle-on-2" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+										<label for="toggle-on-2" class="btn">
+											<img src="img/icons/hat.png" alt="hat"> 
+											<span class="btn-text">Живое участие</span>
+										</label>
+										<input id="toggle-off-2" class="toggle toggle-right" name="toggle" value="true" type="radio">
+										<label for="toggle-off-2" class="btn">
+											<img src="img/icons/play.png" alt="play"> 
+											<span class="btn-text">Участие онлайн</span>
+										</label>
+									</div>
+									<div class="checkbox-wrapper">
+										<label class="checkboxcontainer">
+										 	<input type="checkbox">
+										 	<span class="checkmark-1"></span>
+										 	<span class="checkmark"></span>
+										</label>
+										<div class="checkbox-text">Согласен получать новости 
+										о ЗВЕЗДНЫХ лекциях и курсах</div>
+									</div>
+									<button class="submit-form">Отправить заявку</button>
+									<div class="text-form">
+										Количество мест ограничено: 200
+									</div>
+								</form>
 							</div>
 						</div>
 						<div class="form-wrapper">
-							<form action="">
+							<form action="" >
 								<h2> 
 									<span class="bold-h2">Записаться</span> на практическую лекцию
 								</h2>
@@ -74,11 +111,13 @@
 								<input type="email" class="form-input" placeholder="Введите ваш e-mail">
 								<div class="choose-variant">
 									<input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
-									<label for="toggle-on" class="btn"><img src="img/icons/hat.png" alt=""> 
+									<label for="toggle-on" class="btn">
+										<img src="img/icons/hat.png" alt="hat"> 
 										<span class="btn-text">Живое участие</span>
 									</label>
 									<input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
 									<label for="toggle-off" class="btn">
+										<img src="img/icons/play.png" alt="play"> 
 										<span class="btn-text">Участие онлайн</span>
 									</label>
 								</div>
@@ -162,7 +201,7 @@
 					<div class="item bbl">
 						<div class="text-wrapper">
 							<div class="number">03</div>
-							<p>Почему медитация - это путь к вдохновению, путешествие к новым горизонтам</p>
+							<p>Почему медитация &mdash; это путь к вдохновению, путешествие к новым горизонтам</p>
 						</div>
 					</div>
 					<div class="item bl">
@@ -196,7 +235,7 @@
 					<div class="item-lh bn">
 					</div>
 					<div class="item-h3-lh bbl">
-						<button class="button-submit">Принять участие</button>
+						<button class="button-submit" data-fancybox data-src="#form">Принять участие</button>
 						<span class="vacants">Количество мест ограничено: 200</span>
 					</div>
 					<div class="item-lh bbl">
@@ -232,7 +271,67 @@
 				</div>
 			</div>
 		</section>
+		<section id="intensive">
+			<div class="intensive-wrap">
+				<div class="intensive-item left">
+					<img class="intensive-img" src="img/backgrounds/yogs.png" alt="">
+				</div>
+				<div class="intensive-item right">
+					<div class="text-intensive">
+						<h5 class="h5">Трехдневный интенсив</h5>
+						<p class="p-big">Лечение и профилактика психосоматических и эндокринных заболеваний методами Бхригу йоги</p>
+						<p class="p-small">Вы познакомитесь с особенностями методов и получите пошаговый алгоритм достижения физического и психологического благополучия.</p>
+					</div>
+					<hr class="green-line">
+					<div class="dates-intensive">
+						<div class="date-items">
+							<div class="date-wrapper">
+								<span class="date-number">11</span> 
+								<span class="date-right">
+									<span class="date-month">ноября</span>
+									<br>
+									<span class="date-time"> 19:00 - 21:00 </span>
+								</span>
+							</div>
+						</div>
+						<div class="date-items">
+							<div class="date-wrapper">
+								<span class="date-number">12</span> 
+								<span class="date-right">
+									<span class="date-month">ноября</span>
+									<br>
+									<span class="date-time"> 11:00 - 17:30 </span>
+								</span>
+							</div>
+						</div>
+						<div class="date-items">
+							<div class="date-wrapper">
+								<span class="date-number">13</span> 
+								<span class="date-right">
+									<span class="date-month">ноября</span>
+									<br>
+									<span class="date-time"> 11:00 - 17:30 </span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="know-more">
+						<button class="know-more-button" data-fancybox data-src="#form">Узнать больше</button>
+						<div class="know-more-text">
+							<p class="know-more-p">Вы можете приобрести билет на 1, 2 или 3 дня</p>
+							<p class="know-more-p">Запись и дополнительная информация</p>
+							<p class="know-more-p">по телефону <span class="rg">+7 999 768 36 38</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<p>&copy; 2016 Synergy Lectorium</p>
+			<a href="#">Политика безопасности</a>
+		</footer>
 	</div>
 	<script src="js/libs.min.js"></script>
+	<script src="js/common.js"></script>
 </body>
 </html>

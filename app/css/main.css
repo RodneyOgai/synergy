@@ -47,41 +47,12 @@ button {
   display: flex; }
 
 #all {
+  -webkit-box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.75);
   min-width: 300px;
   width: 100%;
   max-width: 1920px;
   margin: 0 auto; }
-
-.modal-wrapper {
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
-  opacity: 0.3;
-  z-index: 88888; }
-
-.modal {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  left: 25%;
-  opacity: 1;
-  top: 25%;
-  bottom: 25%;
-  right: 25%;
-  z-index: 9999999999999; }
-  .modal .modal-item {
-    width: 100%;
-    height: 100%; }
 
 .header-wrapper {
   overflow: hidden;
@@ -204,22 +175,26 @@ button {
         font-size: 16px;
         font-weight: 400; }
 
-.form-wrapper {
+.form-wrapper,
+.form-wrapper-modal {
   min-width: 434px;
   padding: 20px 0;
   background-color: rgba(44, 76, 101, 0.4); }
-  .form-wrapper h2 {
+  .form-wrapper h2,
+  .form-wrapper-modal h2 {
     color: #fff;
     text-align: center;
     font-size: 18px;
     font-family: "Proxima Nova - Semibold", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.02px; }
-    .form-wrapper h2 .bold-h2 {
+    .form-wrapper h2 .bold-h2,
+    .form-wrapper-modal h2 .bold-h2 {
       display: block;
       font-size: 41px;
       font-family: "Proxima Nova - Semibold", sans-serif; }
-  .form-wrapper .form-input {
+  .form-wrapper .form-input,
+  .form-wrapper-modal .form-input {
     display: block;
     margin: 18px auto;
     min-width: 300px;
@@ -230,40 +205,48 @@ button {
     font-size: 18px;
     font-weight: 400;
     border: none; }
-  .form-wrapper .form-input::-webkit-input-placeholder {
+  .form-wrapper .form-input::-webkit-input-placeholder,
+  .form-wrapper-modal .form-input::-webkit-input-placeholder {
     font-family: "Proxima Nova" , sans-serif;
     color: #839fb1;
     font-weight: 400;
     opacity: 1; }
-  .form-wrapper .form-input::-moz-placeholder {
+  .form-wrapper .form-input::-moz-placeholder,
+  .form-wrapper-modal .form-input::-moz-placeholder {
     font-family: "Proxima Nova" , sans-serif;
     color: #839fb1;
     font-weight: 400;
     opacity: 1; }
-  .form-wrapper .form-input:-ms-input-placeholder {
+  .form-wrapper .form-input:-ms-input-placeholder,
+  .form-wrapper-modal .form-input:-ms-input-placeholder {
     font-family: "Proxima Nova" , sans-serif;
     color: #839fb1;
     font-weight: 400;
     opacity: 1; }
-  .form-wrapper .form-input::-ms-input-placeholder {
+  .form-wrapper .form-input::-ms-input-placeholder,
+  .form-wrapper-modal .form-input::-ms-input-placeholder {
     font-family: "Proxima Nova" , sans-serif;
     color: #839fb1;
     font-weight: 400;
     opacity: 1; }
-  .form-wrapper .form-input::placeholder {
+  .form-wrapper .form-input::placeholder,
+  .form-wrapper-modal .form-input::placeholder {
     font-family: "Proxima Nova" , sans-serif;
     color: #839fb1;
     font-weight: 400;
     opacity: 1; }
-  .form-wrapper .form-input:-ms-input-placeholder {
+  .form-wrapper .form-input:-ms-input-placeholder,
+  .form-wrapper-modal .form-input:-ms-input-placeholder {
     font-family: "Proxima Nova", sans-serif;
       font-family-color: #839fb1;
       font-family-font-weight: 400; }
-  .form-wrapper .form-input::-ms-input-placeholder {
+  .form-wrapper .form-input::-ms-input-placeholder,
+  .form-wrapper-modal .form-input::-ms-input-placeholder {
     font-family: "Proxima Nova", sans-serif;
       font-family-color: #839fb1;
       font-family-font-weight: 400; }
-  .form-wrapper .submit-form {
+  .form-wrapper .submit-form,
+  .form-wrapper-modal .submit-form {
     width: 70%;
     height: 64px;
     display: block;
@@ -276,7 +259,8 @@ button {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.9px; }
-  .form-wrapper .text-form {
+  .form-wrapper .text-form,
+  .form-wrapper-modal .text-form {
     width: 70%;
     display: block;
     text-align: center;
@@ -874,7 +858,6 @@ input[type="radio"].toggle {
   display: -ms-flexbox;
   display: flex;
   padding: 10px;
-  width: 100%;
   background-color: #542749;
   color: #fff;
   -webkit-justify-content: space-around;
@@ -883,7 +866,9 @@ input[type="radio"].toggle {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  min-width: 300px;
+  max-width: 1920px; }
   #footer a {
     color: #fff;
     text-decoration: none;

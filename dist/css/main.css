@@ -15,6 +15,12 @@ button {
   src: url("../fonts/ProximaNova-Semibold.woff"); }
 
 @font-face {
+  font-family: "Proxima Nova Rg";
+  src: url("../fonts/ProximaNova-RegularIt.eot");
+  src: url("../fonts/ProximaNova-RegularIt.ttf");
+  src: url("../fonts/ProximaNova-RegularIt.woff"); }
+
+@font-face {
   font-family: "Proxima Nova";
   src: url("../fonts/ProximaNova-Regular.eot");
   src: url("../fonts/ProximaNova-Regular.ttf"); }
@@ -169,22 +175,26 @@ button {
         font-size: 16px;
         font-weight: 400; }
 
-.form-wrapper {
+.form-wrapper,
+.form-wrapper-modal {
   min-width: 434px;
   padding: 20px 0;
   background-color: rgba(44, 76, 101, 0.4); }
-  .form-wrapper h2 {
+  .form-wrapper h2,
+  .form-wrapper-modal h2 {
     color: #fff;
     text-align: center;
     font-size: 18px;
     font-family: "Proxima Nova - Semibold", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.02px; }
-    .form-wrapper h2 .bold-h2 {
+    .form-wrapper h2 .bold-h2,
+    .form-wrapper-modal h2 .bold-h2 {
       display: block;
       font-size: 41px;
       font-family: "Proxima Nova - Semibold", sans-serif; }
-  .form-wrapper .form-input {
+  .form-wrapper .form-input,
+  .form-wrapper-modal .form-input {
     display: block;
     margin: 18px auto;
     min-width: 300px;
@@ -195,40 +205,48 @@ button {
     font-size: 18px;
     font-weight: 400;
     border: none; }
-  .form-wrapper .form-input::-webkit-input-placeholder {
+  .form-wrapper .form-input::-webkit-input-placeholder,
+  .form-wrapper-modal .form-input::-webkit-input-placeholder {
     font-family: "Proxima Nova" , sans-serif;
     color: #839fb1;
     font-weight: 400;
     opacity: 1; }
-  .form-wrapper .form-input::-moz-placeholder {
+  .form-wrapper .form-input::-moz-placeholder,
+  .form-wrapper-modal .form-input::-moz-placeholder {
     font-family: "Proxima Nova" , sans-serif;
     color: #839fb1;
     font-weight: 400;
     opacity: 1; }
-  .form-wrapper .form-input:-ms-input-placeholder {
+  .form-wrapper .form-input:-ms-input-placeholder,
+  .form-wrapper-modal .form-input:-ms-input-placeholder {
     font-family: "Proxima Nova" , sans-serif;
     color: #839fb1;
     font-weight: 400;
     opacity: 1; }
-  .form-wrapper .form-input::-ms-input-placeholder {
+  .form-wrapper .form-input::-ms-input-placeholder,
+  .form-wrapper-modal .form-input::-ms-input-placeholder {
     font-family: "Proxima Nova" , sans-serif;
     color: #839fb1;
     font-weight: 400;
     opacity: 1; }
-  .form-wrapper .form-input::placeholder {
+  .form-wrapper .form-input::placeholder,
+  .form-wrapper-modal .form-input::placeholder {
     font-family: "Proxima Nova" , sans-serif;
     color: #839fb1;
     font-weight: 400;
     opacity: 1; }
-  .form-wrapper .form-input:-ms-input-placeholder {
+  .form-wrapper .form-input:-ms-input-placeholder,
+  .form-wrapper-modal .form-input:-ms-input-placeholder {
     font-family: "Proxima Nova", sans-serif;
       font-family-color: #839fb1;
       font-family-font-weight: 400; }
-  .form-wrapper .form-input::-ms-input-placeholder {
+  .form-wrapper .form-input::-ms-input-placeholder,
+  .form-wrapper-modal .form-input::-ms-input-placeholder {
     font-family: "Proxima Nova", sans-serif;
       font-family-color: #839fb1;
       font-family-font-weight: 400; }
-  .form-wrapper .submit-form {
+  .form-wrapper .submit-form,
+  .form-wrapper-modal .submit-form {
     width: 70%;
     height: 64px;
     display: block;
@@ -241,7 +259,8 @@ button {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.9px; }
-  .form-wrapper .text-form {
+  .form-wrapper .text-form,
+  .form-wrapper-modal .text-form {
     width: 70%;
     display: block;
     text-align: center;
@@ -341,6 +360,9 @@ button {
       -ms-flex-pack: distribute;
           justify-content: space-around;
   color: #fff; }
+  .btn img {
+    width: 40px;
+    display: none; }
 
 .btn-text {
   text-align: left;
@@ -380,6 +402,8 @@ input[type="radio"].toggle {
     cursor: default;
     color: #839fb1;
     background-color: #fff; }
+    input[type="radio"].toggle:checked + label img {
+      display: block; }
     input[type="radio"].toggle:checked + label:after {
       left: 0; }
 
@@ -666,3 +690,187 @@ input[type="radio"].toggle {
         font-family: "Proxima Nova" , sans-serif;
         font-size: 24px;
         font-weight: 400; }
+
+#intensive {
+  width: 100%; }
+  #intensive .intensive-wrap {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative; }
+    #intensive .intensive-wrap .left {
+      background-color: #dfdbe7;
+      width: 30%;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
+    #intensive .intensive-wrap .right {
+      background-color: #f3ebf5;
+      width: 70%; }
+    #intensive .intensive-wrap .intensive-item {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      color: #542749; }
+      #intensive .intensive-wrap .intensive-item img {
+        width: 190px;
+        height: 380px;
+        opacity: .8;
+        margin-bottom: -20px;
+        margin-right: 20px; }
+      #intensive .intensive-wrap .intensive-item .text-intensive {
+        margin: 10px 20px; }
+        #intensive .intensive-wrap .intensive-item .text-intensive .h5 {
+          color: #542749;
+          font-weight: 600;
+          font-family: "Proxima Nova - Semibold"  , sans-serif;
+          font-size: 48px;
+          margin: 10px 0; }
+        #intensive .intensive-wrap .intensive-item .text-intensive .p-big {
+          max-width: 696px;
+          font-family: "Proxima Nova - Regular" , sans-serif;
+          font-weight: 400;
+          font-size: 28px;
+          line-height: 1;
+          margin: 0; }
+        #intensive .intensive-wrap .intensive-item .text-intensive .p-small {
+          max-width: 571px;
+          font-family: "Proxima Nova" , sans-serif;
+          font-size: 16px;
+          font-weight: 400; }
+      #intensive .intensive-wrap .intensive-item .green-line {
+        height: 1px;
+        margin: 10px 20px;
+        border: none;
+        background-color: #66b045;
+        width: 70%; }
+      #intensive .intensive-wrap .intensive-item .dates-intensive {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 70%;
+        margin-left: 20px;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        #intensive .intensive-wrap .intensive-item .dates-intensive .date-wrapper {
+          width: 200px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          #intensive .intensive-wrap .intensive-item .dates-intensive .date-wrapper .date-number {
+            color: #66b045;
+            font-family: "Proxima Nova", sans-serif;
+            font-size: 70px;
+            margin-right: 10px;
+            font-weight: 700;
+            letter-spacing: -1.59px;
+            display: -webkit-inline-box;
+            display: -webkit-inline-flex;
+            display: -ms-inline-flexbox;
+            display: inline-flex; }
+          #intensive .intensive-wrap .intensive-item .dates-intensive .date-wrapper .date-month {
+            color: #66b045;
+            font-family: "Proxima Nova - Extrabld", sans-serif;
+            font-size: 30px;
+            letter-spacing: 0.18px;
+            line-height: 0.8; }
+          #intensive .intensive-wrap .intensive-item .dates-intensive .date-wrapper .date-time {
+            color: #66b045;
+            font-family: "Proxima Nova", sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: 0.21px; }
+      #intensive .intensive-wrap .intensive-item .know-more {
+        padding: 10px;
+        margin: 10px 20px;
+        width: 70%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        #intensive .intensive-wrap .intensive-item .know-more .know-more-button {
+          width: 272px;
+          height: 64px;
+          border: 1px solid #542749;
+          background-color: inherit;
+          font-family: "Proxima Nova" , sans-serif;
+          font-size: 18px;
+          color: #542749;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.45px; }
+        #intensive .intensive-wrap .intensive-item .know-more .know-more-text {
+          margin-left: 20px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
+          #intensive .intensive-wrap .intensive-item .know-more .know-more-text .know-more-p {
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            color: #542749;
+            font-family: "Proxima Nova" , sans-serif;
+            font-size: 16px;
+            font-weight: 400; }
+            #intensive .intensive-wrap .intensive-item .know-more .know-more-text .know-more-p .rg {
+              font-family: "Proxima Nova Rg" , sans-serif;
+              font-weight: 700;
+              letter-spacing: 0.16px; }
+
+#footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  background-color: #542749;
+  color: #fff;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 300px;
+  max-width: 1920px; }
+  #footer a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px dotted #fff;
+    line-height: .9; }

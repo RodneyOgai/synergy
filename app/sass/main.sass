@@ -47,31 +47,11 @@ $text-violet: #542749
 	display: flex
 
 #all
-	// box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.75)
+	box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.75)
 	min-width: 300px
 	width: 100%
 	max-width: 1920px
 	margin: 0 auto
-.modal-wrapper
-	width: 100%
-	height: 100vh
-	background-color: #000
-	opacity: 0.3
-	z-index: 88888
-.modal
-	display: flex
-	justify-content: center
-	align-items: center
-	position: fixed
-	left: 25%
-	opacity: 1
-	top: 25%
-	bottom: 25%
-	right: 25%
-	z-index: 9999999999999
-	.modal-item
-		width: 100%
-		height: 100%
 
 .header-wrapper 
 	overflow: hidden
@@ -183,7 +163,8 @@ $text-violet: #542749
 					margin-left: 20px
 					font-size: 16px
 					font-weight: 400
-.form-wrapper
+.form-wrapper, 
+.form-wrapper-modal
 	min-width: 434px
 	padding: 20px 0
 	background-color: rgba(#2c4c65 , .4)
@@ -652,11 +633,12 @@ input[type="radio"].toggle
 #footer
 	display: flex
 	padding: 10px
-	width: 100%
 	background-color: #542749
 	color: #fff
 	justify-content: space-around
 	align-items: center
+	min-width: 300px
+	max-width: 1920px
 	a
 		color: #fff
 		text-decoration: none
